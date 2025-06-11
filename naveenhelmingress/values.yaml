@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+namespace: ingress-nginx
+releasename: naveeningressrelease
 replicaCount: 4
 appdeployname: naveeningress-deployment
 appname: naveeningress
