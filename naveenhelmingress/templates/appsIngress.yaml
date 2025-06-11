@@ -4,9 +4,6 @@ metadata:
   name: apps-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
   - host: amazon.local
@@ -82,17 +79,4 @@ spec:
           service:
             name: navmongoexpsvc
             port:
-              number: 8081
-              
-              
-  - host: argocd.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: argocdrelease-server
-            port:
-              number: 443
-              
+              number: 8081              
